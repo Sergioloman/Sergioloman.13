@@ -15,7 +15,8 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
-  Category.findAll({
+  Category.findOne({
+    where:{id:req.params.id},
     include:[Product]
   })
   .then(data=>res.json(data))
@@ -25,13 +26,30 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
+  Category.create({
+    
+
+
+
+
+
+  })
+  .then(data=>res.json(data))
+  .catch(err => res.status(400).json(err))
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.findOne({
-    where:{id:req.params.id},
-    include: [Product]
+  Category.update({
+    
+
+
+
+
+
+
+
+    
   })
   .then(data=>res.json(data))
   .catch(err => res.status(400).json(err))
@@ -42,7 +60,7 @@ router.delete('/:id', (req, res) => {
   Category.destroy({
     where: { id:req.params.id}
   })
-  .then(dbPost =>{res.json(dbPost)})
+  .then(data =>{res.json(data)})
 });
 
 module.exports = router;
