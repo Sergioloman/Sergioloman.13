@@ -51,7 +51,7 @@ You will see that our file structure has a ***db*** and a ***config*** files. Th
 
 Our config folder contains the middleware for the connection to sequelize, wich will allow us to use the package and interact with the mysql database.
 
-### Models:
+### Models
 
 Our Models are how we create our tables, and populate our schema. Each model correspond to a particular set of data.
 
@@ -59,13 +59,14 @@ Notice that our ***index.js*** file will handle the interactions and association
 
 Thanks to the power of ***sequelize*** we are able to write tables and schema using javascript rather than cumbersome mysql commands.
 
-### Seeds:
+### Seeds
 
 Our seeds contain the hard data for our database. Rather than be written on a ***sql*** file. Our seeds are written in javascript and can be read using sequelize, which is handled by the **index.js** file inside the seeds folder.
 
 We are going to be able to display, add, update, delete all of the paratemeres and values inside of it with our API requests.
 
-### Routes:
+### Routes
+
 Now that we have our data and our connection to the server all set up. We now need to be able to make calls to the server and receive their information for further display in our application.
 
 Our Routes handle our CRUD operations ( Create, Read, Update, and Delete) allowing us to perform changes to the value in our tables. Each api route handles a set of data correspondant to the modules we describe earlier.
@@ -100,7 +101,7 @@ Once you have open Insomnia, make sure that your server is on by running ***npm 
 
 Once running the application should look like the following ***[demo](https://drive.google.com/file/d/1hCEKdVZpRpLFNhILrwhsUlkqJbmlDvVF/view)***  :
 
-<iframe src="https://drive.google.com/file/d/1hCEKdVZpRpLFNhILrwhsUlkqJbmlDvVF/preview" width="640" height="480"></iframe>
+"https://drive.google.com/file/d/1hCEKdVZpRpLFNhILrwhsUlkqJbmlDvVF/preview"
 
 As always. Thank you for stopping by and *happy coding*
 
