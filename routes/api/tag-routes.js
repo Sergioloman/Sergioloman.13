@@ -18,6 +18,8 @@ router.get('/:id', (req, res) => {
     where: {id:req.params.id},
     include: [Product]
   })
+  .then(data => res.json(data))
+  .catch(err => res.status(500).json(err))
 });
 
 router.post('/', (req, res) => {
@@ -40,6 +42,7 @@ router.put('/:id', (req, res) => {
     where: { id: req.params.id}
   })
   .then(data =>{res.json(data)})
+  .catch(err => res.status(400).json(err))
 });
 
 router.delete('/:id', (req, res) => {
@@ -48,6 +51,7 @@ router.delete('/:id', (req, res) => {
     where: { id:req.params.id}
   })
   .then(data =>{res.json(data)})
+  .catch(err => res.status(400).json(err))
 });
 
 module.exports = router;
